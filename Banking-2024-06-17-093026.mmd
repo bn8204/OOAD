@@ -1,0 +1,24 @@
+classDiagram
+
+class Customer {
+    -name: string
+    -accountNumber: string
+    -accountType: string
+    +deposit(amount)
+}
+
+class Account {
+    -accountNumber: string
+    -accountType: string
+    -balance: float
+}
+
+class Transaction {
+    -transactionId: string
+    -date: date
+    -amount: float
+    -type: string
+}
+
+Customer --* Account
+Account --* Transaction

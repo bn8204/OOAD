@@ -1,0 +1,13 @@
+sequenceDiagram
+participant User1 as "User 1"
+participant User2 as "User 2"
+participant Server as "Server"
+
+note over User1: "User 1 sends a message to User 2" 
+User1 ->> Server: Send Message
+Server ->> User2: Receive Message
+
+note over User2: "User 2 receives the Message"
+User2 -->> Server: Acknowledge Message
+Server -->> User1: Acknowledge Message
+

@@ -1,0 +1,25 @@
+classDiagram
+
+class Product {
+    -productId: string
+    -name: string
+    -price: float
+    -description: string
+}
+
+class Customer{
+    -customerId: string
+    -name: string
+    -email: string
+}
+
+class Order {
+    -orderId: string
+    -customerId: string
+    -orderDate: date
+    -total: float
+}
+
+Product --* Order
+Customer --* Order
+
